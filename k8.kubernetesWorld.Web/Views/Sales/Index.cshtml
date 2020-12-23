@@ -1,0 +1,43 @@
+﻿@model IEnumerable<k8.kubernetesWorld.Web.Models.Sales>
+
+<h1>Sales View (NodeJS APi)</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                SNo.
+                @*@Html.DisplayNameFor(model => model.sellerid)*@
+            </th>
+            <th>
+                Seller Name
+                @*@Html.DisplayNameFor(model => model.sellername)*@
+            </th>
+            @*<th>
+                @Html.DisplayNameFor(model => model.saleitem)
+            </th>*@
+            <th>
+                Item
+                @*@Html.DisplayNameFor(model => model.saleitemname)*@
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.sellerid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sellername)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.saleitem)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.saleitemname)
+            </td>            
+        </tr>
+}
+    </tbody>
+</table>

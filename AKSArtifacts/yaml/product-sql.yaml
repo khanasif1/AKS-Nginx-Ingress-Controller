@@ -1,0 +1,56 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: mssql-product
+  namespace: k8-org  
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mssql-product
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: mssql-product
+        image: mcr.microsoft.com/mssql/server:2017-latest
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"        
+        ports:
+        - containerPort: 1433
+        env:
+        - name: MSSQL_PID
+          value: "Developer"
+        - name: ACCEPT_EULA
+          value: "Y"
+        - name: SA_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mssql
+              key: SA_PASSWORD 
+        volumeMounts:
+        - name: mssqldb-product
+          mountPath: /var/opt/mssql-product
+      volumes:
+      - name: mssqldb-product
+        persistentVolumeClaim:
+          claimName: product-mssql-data
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mssql-product
+  namespace: k8-org  
+spec:
+  selector:
+    app: mssql-product
+  ports:
+    - protocol: TCP
+      port: 1433
+      targetPort: 1433
+  type: ClusterIP

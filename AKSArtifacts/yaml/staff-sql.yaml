@@ -1,0 +1,56 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: mssql-staff
+  namespace: k8-org  
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: mssql-staff
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: mssql-staff
+        image: mcr.microsoft.com/mssql/server:2017-latest
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"        
+        ports:
+        - containerPort: 1433
+        env:
+        - name: MSSQL_PID
+          value: "Developer"
+        - name: ACCEPT_EULA
+          value: "Y"
+        - name: SA_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mssql
+              key: SA_PASSWORD 
+        volumeMounts:
+        - name: mssqldb
+          mountPath: /var/opt/mssql
+      volumes:
+      - name: mssqldb
+        persistentVolumeClaim:
+          claimName: mssql-data
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mssql-staff
+  namespace: k8-org  
+spec:
+  selector:
+    app: mssql-staff
+  ports:
+    - protocol: TCP
+      port: 1433
+      targetPort: 1433
+  type: ClusterIP

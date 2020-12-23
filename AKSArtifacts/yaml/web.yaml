@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  namespace: k8-org
+spec:
+  selector:
+      matchLabels:
+        app: web
+  replicas: 1
+  template:
+      metadata:
+        labels:
+            app: web
+      spec:
+        containers:
+        - name: web
+          image:  acrname.azurecr.io/k8_web:1.00
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"          
+          readinessProbe:
+            httpGet:
+              port: 80
+              path: /healthcheck
+          livenessProbe:
+            httpGet:
+              port: 80
+              path: /healthcheck
+          env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: Production
+          - name: staff
+            value: http://staff-service
+          - name: product
+            value: http://product-service 
+          - name: sales
+            value: http://sales-service            
+          ports:
+          - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-service
+  namespace: k8-org
+spec:
+  selector:
+    app: web
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP      

@@ -1,0 +1,15 @@
+{
+  "name": "k8.kubernetes-world.service.sales",
+  "version": "0.0.0",
+  "description": "k8.kubernetesWorld.Service.Sales",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mssql": "^6.2.0",
+    "request": "2.88.2"
+  }
+}

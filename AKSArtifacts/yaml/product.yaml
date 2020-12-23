@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product
+  namespace: k8-org
+spec:
+  selector:
+      matchLabels:
+        app: product
+  replicas: 1
+  template:
+      metadata:
+        labels:
+            app: product
+      spec:
+        containers:
+        - name: product
+          image:  acrname.azurecr.io/k8_product:1.00
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"          
+          readinessProbe:
+            httpGet:
+              port: 80
+              path: /healthcheck
+          livenessProbe:
+            httpGet:
+              port: 80
+              path: /healthcheck
+          env:
+          - name: ASPNETCORE_ENVIRONMENT
+            value: Production
+          - name: DefaultConnection
+            value: Server=mssql-product;User Id=sa;Password=Redhat0!;Integrated Security=false;            
+          ports:
+          - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: product-service
+  namespace: k8-org
+spec:
+  selector:
+    app: product
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: ClusterIP      

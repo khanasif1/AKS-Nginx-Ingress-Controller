@@ -1,0 +1,37 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: api-ingress
+  namespace: k8-org
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /swagger
+        backend:
+          serviceName: staff-service
+          servicePort: 80
+      - path: /api/staff/GetMetadata
+        backend:
+          serviceName: staff-service
+          servicePort: 80 
+      - path: /api/staff
+        backend:
+          serviceName: staff-service
+          servicePort: 80           
+      - path: /api/product/GetMetadata
+        backend:
+          serviceName: product-service
+          servicePort: 80 
+      - path: /api/product
+        backend:
+          serviceName: product-service
+          servicePort: 80  
+      - path: /api/sales
+        backend:
+          serviceName: sales-service
+          servicePort: 80   
+      - path: /
+        backend:
+          serviceName: web-service
+          servicePort: 80                                                  

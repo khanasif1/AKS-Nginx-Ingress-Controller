@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "k8.kubernetesWorld.Web", "k8.kubernetesWorld.Web\k8.kubernetesWorld.Web.csproj", "{B85C872D-08B0-4882-ACBD-AE2B5EC5FABB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "k8.kubernetesWorld.Service.Product", "k8.kubernetesWorld.Service.Product\k8.kubernetesWorld.Service.Product.csproj", "{2FD93779-7839-4B31-A7FD-B35D4CA020B7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "k8.kubernetesWorld.Service.Staff", "k8.kubernetesWorld.Service.Staff\k8.kubernetesWorld.Service.Staff.csproj", "{54EF4DBC-0B81-4CBF-AFAB-4477ED421429}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ContainerArtifacts", "ContainerArtifacts", "{48B804F2-5B5C-4AD6-AF13-616EEFCF7549}"
+	ProjectSection(SolutionItems) = preProject
+		ContainerArtifacts\DockerCommands_V1.ps1 = ContainerArtifacts\DockerCommands_V1.ps1
+		ContainerArtifacts\DockerProjectScript_V1.ps1 = ContainerArtifacts\DockerProjectScript_V1.ps1
+	EndProjectSection
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "k8.kubernetesWorld.Service.Sales", "k8.kubernetesWorld.Service.Sales\k8.kubernetesWorld.Service.Sales.njsproj", "{06CBBC8F-6AB6-4187-8D5C-7A1DF02E4BCE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AKSArtifacts", "AKSArtifacts", "{1F8E58EB-E4C2-4831-A409-03582229AAED}"
+	ProjectSection(SolutionItems) = preProject
+		acr_upload.ps1 = acr_upload.ps1
+		aksdeploy.ps1 = aksdeploy.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "yaml", "yaml", "{14706680-9673-40DE-B498-E524C6BEC63B}"
+	ProjectSection(SolutionItems) = preProject
+		AKSArtifacts\yaml\product.yaml = AKSArtifacts\yaml\product.yaml
+		AKSArtifacts\yaml\sale.yaml = AKSArtifacts\yaml\sale.yaml
+		AKSArtifacts\yaml\staff.yaml = AKSArtifacts\yaml\staff.yaml
+		AKSArtifacts\yaml\web.yaml = AKSArtifacts\yaml\web.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B85C872D-08B0-4882-ACBD-AE2B5EC5FABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B85C872D-08B0-4882-ACBD-AE2B5EC5FABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B85C872D-08B0-4882-ACBD-AE2B5EC5FABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B85C872D-08B0-4882-ACBD-AE2B5EC5FABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FD93779-7839-4B31-A7FD-B35D4CA020B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FD93779-7839-4B31-A7FD-B35D4CA020B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FD93779-7839-4B31-A7FD-B35D4CA020B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FD93779-7839-4B31-A7FD-B35D4CA020B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54EF4DBC-0B81-4CBF-AFAB-4477ED421429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54EF4DBC-0B81-4CBF-AFAB-4477ED421429}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54EF4DBC-0B81-4CBF-AFAB-4477ED421429}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54EF4DBC-0B81-4CBF-AFAB-4477ED421429}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06CBBC8F-6AB6-4187-8D5C-7A1DF02E4BCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06CBBC8F-6AB6-4187-8D5C-7A1DF02E4BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06CBBC8F-6AB6-4187-8D5C-7A1DF02E4BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06CBBC8F-6AB6-4187-8D5C-7A1DF02E4BCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{14706680-9673-40DE-B498-E524C6BEC63B} = {1F8E58EB-E4C2-4831-A409-03582229AAED}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72030976-A561-4967-BB08-06ED731F1944}
+	EndGlobalSection
+EndGlobal
