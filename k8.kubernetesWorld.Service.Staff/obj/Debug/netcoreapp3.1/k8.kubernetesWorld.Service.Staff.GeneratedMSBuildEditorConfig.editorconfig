@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = k8.kubernetesWorld.Service.Staff
+build_property.ProjectDir = C:\_dev\_github\AKS-Nginx-Ingress-Controller\k8.kubernetesWorld.Service.Staff\

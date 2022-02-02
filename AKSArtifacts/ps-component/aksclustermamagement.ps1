@@ -14,7 +14,7 @@ az feature list -o table --query "[?contains(name, 'Microsoft.ContainerService/S
 az provider register --namespace Microsoft.ContainerService
 
 #Stop an AKS Cluster
-az aks stop --name **cluster name** --resource-group **resourcegroup**
+az aks stop --name demo-k8cluster --resource-group k8rg
 
 #Start an AKS Cluster
-az aks start --name **cluster name** --resource-group **resourcegroup**
+az aks start --name demo-k8cluster --resource-group k8rg

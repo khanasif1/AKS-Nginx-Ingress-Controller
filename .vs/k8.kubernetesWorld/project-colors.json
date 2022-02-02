@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b85c872d-08b0-4882-acbd-ae2b5ec5fabb": {
+      "ProjectGuid": "b85c872d-08b0-4882-acbd-ae2b5ec5fabb",
+      "DisplayName": "k8.kubernetesWorld.Web",
+      "ColorIndex": 0
+    },
+    "06cbbc8f-6ab6-4187-8d5c-7a1df02e4bce": {
+      "ProjectGuid": "06cbbc8f-6ab6-4187-8d5c-7a1df02e4bce",
+      "DisplayName": "k8.kubernetesWorld.Service.Sales",
+      "ColorIndex": 1
+    },
+    "48b804f2-5b5c-4ad6-af13-616eefcf7549": {
+      "ProjectGuid": "48b804f2-5b5c-4ad6-af13-616eefcf7549",
+      "DisplayName": "ContainerArtifacts",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

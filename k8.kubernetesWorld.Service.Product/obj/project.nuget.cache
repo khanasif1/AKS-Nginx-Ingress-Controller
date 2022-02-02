@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+JX0X+7LYe1i9T/iVif4ptNBhmugU/8ucI5zDcxLOAtA1go5RYA1BTW+C91F16N5Iwn1criKcynPAyzNBn6cyg==",
+  "dgSpecHash": "gl87ebGn2M1ss5V0DFPSs3tQsX+qZ3VGx1wX+kdO6nSulUFHZ1UKyaOcaUIEzSZsYGU/sdKZi4yhb/aaBNBt+A==",
   "success": true,
-  "projectFilePath": "C:\\_dev\\_github\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Service.Product\\k8.kubernetesWorld.Service.Product.csproj",
+  "projectFilePath": "C:\\_dev\\_github\\AKS-Nginx-Ingress-Controller\\k8.kubernetesWorld.Service.Product\\k8.kubernetesWorld.Service.Product.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\askha\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\askha\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

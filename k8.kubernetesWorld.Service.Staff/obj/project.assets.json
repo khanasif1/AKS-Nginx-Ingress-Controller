@@ -6741,11 +6741,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\_dev\\_github\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Service.Staff\\k8.kubernetesWorld.Service.Staff.csproj",
+      "projectUniqueName": "C:\\_dev\\_github\\AKS-Nginx-Ingress-Controller\\k8.kubernetesWorld.Service.Staff\\k8.kubernetesWorld.Service.Staff.csproj",
       "projectName": "k8.kubernetesWorld.Service.Staff",
-      "projectPath": "C:\\_dev\\_github\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Service.Staff\\k8.kubernetesWorld.Service.Staff.csproj",
+      "projectPath": "C:\\_dev\\_github\\AKS-Nginx-Ingress-Controller\\k8.kubernetesWorld.Service.Staff\\k8.kubernetesWorld.Service.Staff.csproj",
       "packagesPath": "C:\\Users\\askha\\.nuget\\packages\\",
-      "outputPath": "C:\\_dev\\_github\\kubernetesMicroserviceApp\\k8.kubernetesWorld.Service.Staff\\obj\\",
+      "outputPath": "C:\\_dev\\_github\\AKS-Nginx-Ingress-Controller\\k8.kubernetesWorld.Service.Staff\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\askha\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6809,7 +6809,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
